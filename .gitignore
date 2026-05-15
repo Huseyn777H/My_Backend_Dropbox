@@ -10,3 +10,5 @@ amplify/backend/awscloudformation/
 amplify/#current-cloud-backend/
 aws-exports.js
 src/aws-exports.js
+
+.vercel

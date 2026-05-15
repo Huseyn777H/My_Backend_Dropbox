@@ -2,7 +2,7 @@
 
 Small Dropbox-like project for the Qwasar backend/serverless subject.
 
-Hosted URL: not deployed yet. After `amplify publish`, put the Amplify or Route 53 URL here.
+Hosted URL: https://my-backend-dropbox-subject-1-soluti.vercel.app
 
 ## What it does
 
@@ -51,14 +51,14 @@ amplify add function
 amplify push
 ```
 
-For hosting:
+For AWS Amplify hosting:
 
 ```bash
 amplify add hosting
 amplify publish
 ```
 
-Then update the hosted URL at the top of this README.
+For this submission I deployed the React frontend on Vercel. AWS resources still need Amplify configuration before real file upload/download works.
 
 ## Folder structure
 
