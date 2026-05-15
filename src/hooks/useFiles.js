@@ -127,8 +127,24 @@ export function useFiles(enabled = true) {
 
     setBusy(true);
     try {
+      const destinationPath = `${STORAGE_PREFIX}${file.name}`;
+      const versionStamp = new Date().toISOString().replace(/[:.]/g, '-');
+
+      try {
+        await copy({
+          source: {
+            path: destinationPath,
+          },
+          destination: {
+            path: `${STORAGE_PREFIX}.versions/${file.name}/${versionStamp}-${file.name}`,
+          },
+        });
+      } catch {
+        // First upload has no previous object to archive.
+      }
+
       await uploadData({
-        path: `${STORAGE_PREFIX}${file.name}`,
+        path: destinationPath,
         data: file,
         options: {
           contentType: file.type || 'application/octet-stream',
@@ -140,7 +156,7 @@ export function useFiles(enabled = true) {
 
       notify(`${file.name} uploaded`);
       await refresh();
-      setSelectedKey(`${STORAGE_PREFIX}${file.name}`);
+      setSelectedKey(destinationPath);
     } catch (err) {
       fail(err);
     } finally {

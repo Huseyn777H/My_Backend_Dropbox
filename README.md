@@ -11,7 +11,7 @@ Vercel URL: https://my-backend-dropbox-subject-1-soluti.vercel.app
 - User authentication with Amazon Cognito.
 - Upload files to S3.
 - List, download and delete uploaded files.
-- Keep old file copies in a `.versions` folder.
+- Keep old file copies in a `.versions` folder when a file is replaced.
 - Use Lambda functions for S3 create/delete events.
 - Store simple file event metadata in DynamoDB.
 
@@ -60,7 +60,12 @@ amplify add hosting
 amplify publish
 ```
 
-For this submission I deployed the React frontend on AWS S3 static website hosting. AWS Amplify Gen 1 project creation was blocked for this account, so the included Amplify backend files remain as the backend implementation scaffold.
+For this submission I deployed the React frontend on AWS S3 static website hosting and connected it to Cognito + an S3 storage bucket. `src/aws-exports.js` is generated locally and ignored by git, so run the backend deploy script before rebuilding from a fresh clone.
+
+```bash
+python scripts/deploy_aws_backend.py
+npm run build
+```
 
 ## Folder structure
 
