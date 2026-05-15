@@ -1,0 +1,57 @@
+.versionPanel {
+  min-height: 280px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.versionHeader {
+  margin-bottom: 12px;
+}
+
+.versionHeader h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.versionRows {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.versionRows li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.versionRows strong,
+.versionRows small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.versionRows small {
+  margin-top: 4px;
+  color: #666;
+}
+
+.versionRows button {
+  border: 1px solid #0b5cab;
+  border-radius: 4px;
+  background: #fff;
+  color: #0b5cab;
+  padding: 7px 9px;
+  cursor: pointer;
+}

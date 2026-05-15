@@ -1,0 +1,30 @@
+{
+  "auth": {
+    "serverlessdropboxauth": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation"
+    }
+  },
+  "storage": {
+    "serverlessdropboxfiles": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    },
+    "serverlessdropboxmeta": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    }
+  },
+  "function": {
+    "archiveFileVersion": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true
+    },
+    "recordFileDelete": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true
+    }
+  }
+}

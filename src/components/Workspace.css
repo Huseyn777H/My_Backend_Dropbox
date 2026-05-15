@@ -1,0 +1,107 @@
+.appShell {
+  min-height: 100vh;
+  padding: 24px;
+  background: #f5f5f5;
+  color: #222;
+}
+
+.appHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.brandBlock h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  margin: 6px 0 0;
+  color: #666;
+}
+
+.accountTools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.signedIn {
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #555;
+}
+
+.iconButton,
+.textButton {
+  border: 1px solid #222;
+  border-radius: 4px;
+  background: #fff;
+  color: #222;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.iconButton:hover,
+.textButton:hover {
+  background: #222;
+  color: #fff;
+}
+
+.workspaceGrid {
+  display: grid;
+  grid-template-columns: 280px minmax(320px, 1fr) 300px;
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.setupNotice,
+.toastMessage,
+.errorMessage {
+  max-width: 1100px;
+  margin: 16px auto 0;
+  padding: 10px 12px;
+  border-radius: 4px;
+}
+
+.setupNotice {
+  border: 1px solid #d6bd6a;
+  background: #fff7d6;
+}
+
+.toastMessage {
+  border: 1px solid #77a577;
+  background: #eaf6ea;
+}
+
+.errorMessage {
+  border: 1px solid #b96b6b;
+  background: #ffe8e8;
+}
+
+@media (max-width: 900px) {
+  .workspaceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .appHeader {
+    flex-direction: column;
+  }
+
+  .accountTools {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,103 @@
+.filePanel {
+  min-height: 360px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.panelHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.panelKicker {
+  margin: 0 0 4px;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.panelHeading h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.fileCount {
+  min-width: 30px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #eee;
+  text-align: center;
+}
+
+.emptyState {
+  margin: 20px 0;
+  color: #666;
+}
+
+.fileRows {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fileRows li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.fileRows li.selectedFile {
+  border-color: #0b5cab;
+  background: #f6fbff;
+}
+
+.fileIdentity {
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.fileIdentity strong,
+.fileIdentity small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileIdentity small {
+  margin-top: 3px;
+  color: #666;
+}
+
+.fileActions {
+  display: flex;
+  gap: 6px;
+}
+
+.fileActions button {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f8f8f8;
+  color: #222;
+  padding: 7px 9px;
+  cursor: pointer;
+}
+
+.fileActions button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}

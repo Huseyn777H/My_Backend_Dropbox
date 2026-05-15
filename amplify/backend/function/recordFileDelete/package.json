@@ -1,0 +1,8 @@
+{
+  "name": "record-file-delete",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.699.0"
+  }
+}
