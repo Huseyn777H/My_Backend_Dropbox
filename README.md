@@ -2,7 +2,9 @@
 
 Small Dropbox-like project for the Qwasar backend/serverless subject.
 
-Hosted URL: https://my-backend-dropbox-subject-1-soluti.vercel.app
+Hosted URL: http://my-backend-dropbox-huseyn777h-20260515.s3-website.eu-north-1.amazonaws.com
+
+Vercel URL: https://my-backend-dropbox-subject-1-soluti.vercel.app
 
 ## What it does
 
@@ -58,7 +60,7 @@ amplify add hosting
 amplify publish
 ```
 
-For this submission I deployed the React frontend on Vercel. AWS resources still need Amplify configuration before real file upload/download works.
+For this submission I deployed the React frontend on AWS S3 static website hosting. AWS Amplify Gen 1 project creation was blocked for this account, so the included Amplify backend files remain as the backend implementation scaffold.
 
 ## Folder structure
 
